@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# 忽略所有数据文件
+*.csv
+*.zip
+*.json
+# 忽略 Jupyter Notebook 自动生成的缓存
+.ipynb_checkpoints
