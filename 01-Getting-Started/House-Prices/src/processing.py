@@ -20,7 +20,6 @@ def preprocess_data(train_df, test_df):
     for col in cols_zero:
         all_data[col] = all_data[col].fillna(0)
 
-    # 3. LotFrontage 智能填充 + 兜底
     # 先按邻里中位数填
     all_data["LotFrontage"] = all_data.groupby("Neighborhood")["LotFrontage"].transform(
         lambda x: x.fillna(x.median()))
